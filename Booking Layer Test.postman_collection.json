@@ -1,0 +1,1071 @@
+{
+	"info": {
+		"_postman_id": "033e4a1d-7d0a-4d5d-9de8-5e6e54be291e",
+		"name": "Booking Layer Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24897419"
+	},
+	"item": [
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "Get All Rooms",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/rooms",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"rooms"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Rooms",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/rooms",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"rooms"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 Feb 2023 17:58:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 Feb 2023 17:58:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"capacity\": 5,\n            \"created_at\": \"2023-02-03 17:23:55\",\n            \"updated_at\": \"2023-02-03 17:23:55\"\n        },\n        {\n            \"id\": 3,\n            \"capacity\": 5,\n            \"created_at\": \"2023-02-03 17:25:35\",\n            \"updated_at\": \"2023-02-03 17:25:35\"\n        }\n    ],\n    \"meta\": {\n        \"client_ip\": \"127.0.0.1\",\n        \"hostname\": \"Aldis-MacBook-Pro-2.local\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Room by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/rooms/:roomId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"rooms",
+								":roomId"
+							],
+							"variable": [
+								{
+									"key": "roomId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Room by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/rooms/:roomId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"rooms",
+										":roomId"
+									],
+									"variable": [
+										{
+											"key": "roomId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 Feb 2023 17:59:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 Feb 2023 17:59:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"capacity\": 5,\n        \"created_at\": \"2023-02-03 17:23:55\",\n        \"updated_at\": \"2023-02-03 17:23:55\"\n    },\n    \"meta\": {\n        \"client_ip\": \"127.0.0.1\",\n        \"hostname\": \"Aldis-MacBook-Pro-2.local\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Room",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"capacity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/rooms",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"rooms"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Room",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"capacity\": 5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/rooms",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"rooms"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 Feb 2023 17:59:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 Feb 2023 17:59:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"capacity\": 5,\n        \"updated_at\": \"2023-02-03 17:59:51\",\n        \"created_at\": \"2023-02-03 17:59:51\",\n        \"id\": 4\n    },\n    \"meta\": {\n        \"client_ip\": \"127.0.0.1\",\n        \"hostname\": \"Aldis-MacBook-Pro-2.local\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"room_id\": 2,\n    \"starts_at\": \"2023-01-03\",\n    \"ends_at\": \"2023-01-08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/bookings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Booking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"room_id\": 2,\n    \"starts_at\": \"2022-01-03\",\n    \"ends_at\": \"2022-01-08\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/bookings",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"bookings"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 05:49:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 05:49:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"starts_at\": \"2022-01-03\",\n        \"ends_at\": \"2022-01-08\",\n        \"room_id\": 2,\n        \"updated_at\": \"2023-02-04 05:49:22\",\n        \"created_at\": \"2023-02-04 05:49:22\",\n        \"id\": 9,\n        \"room\": {\n            \"id\": 2,\n            \"capacity\": 4,\n            \"created_at\": \"2023-02-04 05:40:25\",\n            \"updated_at\": \"2023-02-04 05:40:25\"\n        }\n    },\n    \"meta\": {\n        \"client_ip\": \"127.0.0.1\",\n        \"hostname\": \"Aldis-MacBook-Pro-2.local\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Booking",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"room_id\": 2,\n    \"starts_at\": \"2022-01-03\",\n    \"ends_at\": \"2022-01-08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/bookings/:bookingId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"bookings",
+								":bookingId"
+							],
+							"variable": [
+								{
+									"key": "bookingId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Booking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"room_id\": 2,\n    \"starts_at\": \"2022-01-03\",\n    \"ends_at\": \"2022-01-08\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/bookings",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"bookings"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 05:49:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 05:49:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"starts_at\": \"2022-01-03\",\n        \"ends_at\": \"2022-01-08\",\n        \"room_id\": 2,\n        \"updated_at\": \"2023-02-04 05:49:22\",\n        \"created_at\": \"2023-02-04 05:49:22\",\n        \"id\": 9,\n        \"room\": {\n            \"id\": 2,\n            \"capacity\": 4,\n            \"created_at\": \"2023-02-04 05:40:25\",\n            \"updated_at\": \"2023-02-04 05:40:25\"\n        }\n    },\n    \"meta\": {\n        \"client_ip\": \"127.0.0.1\",\n        \"hostname\": \"Aldis-MacBook-Pro-2.local\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Block",
+			"item": [
+				{
+					"name": "Create Blocks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"room_id\": 2,\n    \"starts_at\": \"2023-01-01\",\n    \"ends_at\": \"2023-01-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/blocks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"blocks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Blocks",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"room_id\": 2,\n    \"starts_at\": \"2021-12-31\",\n    \"ends_at\": \"2022-01-01\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/blocks",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"blocks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 16:06:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 16:06:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"starts_at\": \"2021-12-31\",\n        \"ends_at\": \"2022-01-01\",\n        \"room_id\": 2,\n        \"updated_at\": \"2023-02-04 16:06:42\",\n        \"created_at\": \"2023-02-04 16:06:42\",\n        \"id\": 2,\n        \"room\": {\n            \"id\": 2,\n            \"capacity\": 2,\n            \"created_at\": \"2023-02-04 05:40:25\",\n            \"updated_at\": \"2023-02-04 05:40:25\"\n        }\n    },\n    \"meta\": {\n        \"client_ip\": \"127.0.0.1\",\n        \"hostname\": \"Aldis-MacBook-Pro-2.local\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Block",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"room_id\": 2,\n    \"starts_at\": \"2023-01-01\",\n    \"ends_at\": \"2023-01-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/blocks/:blockId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"blocks",
+								":blockId"
+							],
+							"variable": [
+								{
+									"key": "blockId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Block",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"room_id\": 2,\n    \"starts_at\": \"2021-12-30\",\n    \"ends_at\": \"2022-01-01\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/blocks/:blockId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"blocks",
+										":blockId"
+									],
+									"variable": [
+										{
+											"key": "blockId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 16:07:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 16:07:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"room_id\": 2,\n        \"starts_at\": \"2021-12-30\",\n        \"ends_at\": \"2022-01-01\",\n        \"created_at\": \"2023-02-04 16:06:42\",\n        \"updated_at\": \"2023-02-04 16:07:29\",\n        \"room\": {\n            \"id\": 2,\n            \"capacity\": 2,\n            \"created_at\": \"2023-02-04 05:40:25\",\n            \"updated_at\": \"2023-02-04 05:40:25\"\n        }\n    },\n    \"meta\": {\n        \"client_ip\": \"127.0.0.1\",\n        \"hostname\": \"Aldis-MacBook-Pro-2.local\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Occupancy Rate",
+			"item": [
+				{
+					"name": "Get Daily Occupancy Rate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/daily-occupancy-rates/2023-01-02",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"daily-occupancy-rates",
+								"2023-01-02"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Daily Occupancy Rate",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/daily-occupancy-rates/2023-01-06?room_ids[]=2&room_ids[]=3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"daily-occupancy-rates",
+										"2023-01-06"
+									],
+									"query": [
+										{
+											"key": "room_ids[]",
+											"value": "2"
+										},
+										{
+											"key": "room_ids[]",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Feb 2023 09:31:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Feb 2023 09:31:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"occupancy_rate\": 0.2\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Monthly Occupancy Rate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/monthly-occupancy-rates/2023-01?room_ids[]=2&room_ids[]=3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"monthly-occupancy-rates",
+								"2023-01"
+							],
+							"query": [
+								{
+									"key": "room_ids[]",
+									"value": "2"
+								},
+								{
+									"key": "room_ids[]",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Monthly Occupancy Rate",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/monthly-occupancy-rates/2023-01?room_ids[]=2&room_ids[]=3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"monthly-occupancy-rates",
+										"2023-01"
+									],
+									"query": [
+										{
+											"key": "room_ids[]",
+											"value": "2"
+										},
+										{
+											"key": "room_ids[]",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Feb 2023 15:41:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Feb 2023 15:41:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"occupancy_rate\": 0.06\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
